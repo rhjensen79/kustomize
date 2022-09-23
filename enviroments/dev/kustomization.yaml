@@ -1,0 +1,9 @@
+bases:
+  - ../../application
+
+patches:
+  - replica_count.yaml
+
+images:
+  - name: nginx
+    newTag: latest
