@@ -21,3 +21,6 @@ spec:
               cpu: "500m"
           ports:
             - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: nginx-config

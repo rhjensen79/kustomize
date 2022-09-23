@@ -1,3 +1,7 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: nginx
+
 bases:
   - ../../application
 
@@ -7,3 +11,8 @@ patches:
 images:
   - name: nginx
     newTag: latest
+
+configMapGenerator:
+  - name: nginx-config
+    files:
+      - nginx.properties
