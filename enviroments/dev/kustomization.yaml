@@ -16,3 +16,8 @@ configMapGenerator:
   - name: nginx-config
     files:
       - nginx.properties
+
+secretGenerator:
+  - name: nginx-secret
+    envs:
+      - .env.secret
